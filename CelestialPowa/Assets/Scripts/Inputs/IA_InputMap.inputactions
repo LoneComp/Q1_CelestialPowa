@@ -1,0 +1,134 @@
+{
+    "name": "IA_InputMap",
+    "maps": [
+        {
+            "name": "PlayerInputs",
+            "id": "64a42816-a0a5-4b1a-afda-0d7204907a39",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "c3f1e981-5d9a-4d0c-ac56-f7a498643032",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveCamera",
+                    "type": "Button",
+                    "id": "f1c02515-da03-4b4b-ad16-a5be452a0d80",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZoomInOut",
+                    "type": "Value",
+                    "id": "6cd64bcb-103a-4bfd-b2c1-309504d07c77",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CameraDelta",
+                    "type": "PassThrough",
+                    "id": "14db1119-802d-4f4e-858a-43674533129b",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenCloseInventory",
+                    "type": "Button",
+                    "id": "6128223e-9e37-44bd-b387-abb024a9dd93",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PauseMenu",
+                    "type": "Button",
+                    "id": "d688412e-ff21-43b5-a335-ece8f3d17f63",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff5021a4-219d-4983-beab-eb92e7c098f1",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83790813-7d2f-4f16-8c04-02ced9a2ec11",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62fcb9ad-7dfc-470d-84fa-d293317e81c3",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ea0ab38-7ce0-4ef5-98d0-9ed307f6897b",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenCloseInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42221081-52e7-4ff9-9da9-8a0e7023ae15",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ab176f2-8fc8-4748-a479-0ef833f03ab8",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false)",
+                    "groups": "",
+                    "action": "ZoomInOut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
