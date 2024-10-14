@@ -5,15 +5,15 @@ using UnityEngine;
 public class S_ShapeGenerator
 {
     S_ShapeSettings settings;
-    S_NoiseFilter[] noiseFilters;
+    I_NoiseFilter[] noiseFilters;
 
     public S_ShapeGenerator(S_ShapeSettings _settings)
     {
         this.settings = _settings;
-        noiseFilters = new S_NoiseFilter[_settings.noiseLayers.Length];
+        noiseFilters = new I_NoiseFilter[_settings.noiseLayers.Length];
         for (int i = 0; i < noiseFilters.Length; i++)
         {
-            noiseFilters[i] = new S_NoiseFilter(settings.noiseLayers[i].noiseSettings);
+            noiseFilters[i] = S_NoiseFilterFactory.CreateNoiseFilter(_settings.noiseLayers[i].noiseSettings);
         }
     }
 
