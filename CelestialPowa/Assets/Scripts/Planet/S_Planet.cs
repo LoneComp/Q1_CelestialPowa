@@ -34,7 +34,10 @@ public class S_Planet : MonoBehaviour
         }
         terrainFaces = new S_TerrainFaces[6];
 
-        Vector3[] directions = { Vector3.up, Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back }; 
+        Vector3[] directions = { Vector3.up, Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
+        
+        shapeSettings.seed = new Vector3(Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f)); //make a new seed everytime
+        shapeSettings.UpdateSeed();
 
         for (int i = 0; i < 6; i++)
         {
