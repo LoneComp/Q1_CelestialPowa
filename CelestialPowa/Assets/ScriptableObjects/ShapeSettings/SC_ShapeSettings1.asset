@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SC_ShapeSettings1
   m_EditorClassIdentifier: 
   planetRadius: 20
-  seed: {x: 83.99481, y: -3.8309793, z: 49.75921}
+  seed: {x: 0, y: 0, z: 0}
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
       baseRoughness: 1.03
       roughness: 0.4
       persistence: 0.26
-      centre: {x: 83.99481, y: -3.8309793, z: 49.75921}
+      centre: {x: 132.837, y: 144.5204, z: 91.50892}
       minValue: 0.75
   - enabled: 1
     useFirstLayerAsMask: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
       baseRoughness: 1
       roughness: 0.23
       persistence: 0.12
-      centre: {x: 83.99481, y: -3.8309793, z: 49.75921}
+      centre: {x: 132.837, y: 144.5204, z: 91.50892}
       minValue: 0.35
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
       baseRoughness: 3.82
       roughness: 5.29
       persistence: 1.5
-      centre: {x: 83.99481, y: -3.8309793, z: 49.75921}
+      centre: {x: 132.837, y: 144.5204, z: 91.50892}
       minValue: 0.3
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -57,7 +57,7 @@ MonoBehaviour:
       baseRoughness: 1.14
       roughness: 1.09
       persistence: 2.8
-      centre: {x: 83.99481, y: -3.8309793, z: 49.75921}
+      centre: {x: 132.837, y: 144.5204, z: 91.50892}
       minValue: 1.93
   - enabled: 1
     useFirstLayerAsMask: 1
@@ -68,5 +68,5 @@ MonoBehaviour:
       baseRoughness: 4.38
       roughness: 1.36
       persistence: 0.86
-      centre: {x: 83.99481, y: -3.8309793, z: 49.75921}
+      centre: {x: 132.837, y: 144.5204, z: 91.50892}
       minValue: 2.18

@@ -5,9 +5,9 @@ using UnityEngine;
 public class S_TerrainFaces
 {
     private S_ShapeGenerator shapeGenerator;
-    private Mesh mesh;
+    public Mesh mesh;
     private int resolution;
-    private Vector3 localUp;
+    public Vector3 localUp;
     private Vector3 axisA;
     private Vector3 axisB;
     

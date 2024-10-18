@@ -16,16 +16,17 @@ public class S_Planet : MonoBehaviour
     [Space(10)]
     
     [SerializeField, HideInInspector]
-    private MeshFilter[] meshFilters;
+    public MeshFilter[] meshFilters;
     [HideInInspector]
     public bool shapeFoldoutSetting;
     [HideInInspector]
     public bool colorFoldoutSetting;
-    private S_TerrainFaces[] terrainFaces;
+    public bool isRandomSeed;
+    public S_TerrainFaces[] terrainFaces;
     
     S_ShapeGenerator shapeGenerator;
     
-    private void Initialize()
+    public void Initialize()
     {
         shapeGenerator = new S_ShapeGenerator(shapeSettings);
         if (meshFilters == null || meshFilters.Length == 0)
@@ -35,9 +36,12 @@ public class S_Planet : MonoBehaviour
         terrainFaces = new S_TerrainFaces[6];
 
         Vector3[] directions = { Vector3.up, Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
-        
-        shapeSettings.seed = new Vector3(Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f)); //make a new seed everytime
-        shapeSettings.UpdateSeed();
+
+        if (isRandomSeed)
+        {
+            shapeSettings.seed = new Vector3(Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f), Random.Range(-30.0f, 200.0f)); //make a new seed everytime
+            shapeSettings.UpdateSeed();   
+        }
 
         for (int i = 0; i < 6; i++)
         {
@@ -49,10 +53,13 @@ public class S_Planet : MonoBehaviour
                 meshObject.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
                 meshFilters[i] = meshObject.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
+                //meshObject.AddComponent<MeshCollider>();
+
             }
             terrainFaces[i] = new S_TerrainFaces(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
             bool renderFace = faceRenderMask == FaceRenderMask.All || (int)faceRenderMask - 1 == i;
             meshFilters[i].gameObject.SetActive(renderFace);
+           // meshFilters[i].gameObject.GetComponent<MeshCollider>().convex = true;
         }
     }
 
